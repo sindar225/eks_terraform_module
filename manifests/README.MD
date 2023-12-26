@@ -12,6 +12,8 @@ Before deploying the application, make sure you have the following prerequisites
 
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/): Installed and configured to connect to your Kubernetes cluster.
 
+⚠️ IMPORTANT: Please update <AWS_ACCOUNT_ID> and <ENV> in serviceaccount.yaml accordingly before deploying.
+
 ## Deployment
 
 To deploy the application, follow these steps:
