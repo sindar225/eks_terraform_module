@@ -30,7 +30,7 @@ To deploy k8s resources (application), follow these steps:
 3. Run `kubectl apply -f manifests/serviceaccount.yaml` to deploy `service account` resource
 4. Run `kubectl apply -f manifests/pod.yaml` to deploy the application
 
-More details about the application can be found here:
+More details about the application can be found here: https://github.com/sindar225/eks_terraform_module/blob/master/manifests/README.MD
 
 ## Further development
 The deployment process can be further enhanced by introducing helm charts which will make deployment a lot easier, save time, will help to keep track of the changes, allow templating and more. 
