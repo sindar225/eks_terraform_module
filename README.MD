@@ -14,13 +14,14 @@ Before you can use this Terraform module, make sure you have the following prere
 To use this Terraform module, follow these steps:
 
 1. Clone this repository to your local machine.
-2. Update the variables in the `variables.tf` file to match your desired configuration.
-3. Initialize the Terraform working directory by running `terraform init`.
-4. Review the planned changes by running `terraform plan`.
-5. Apply the changes by running `terraform apply`.
-6. Once the cluster is provisioned, you can access it using the `kubectl` command.
+2. Open `terraform` directory
+3. Update the variables in the `variables.tf` file to match your desired configuration.
+4. Initialize the Terraform working directory by running `terraform init`.
+5. Review the planned changes by running `terraform plan`.
+6. Apply the changes by running `terraform apply`.
+7. Once the cluster is provisioned, you can access it using the `kubectl` command.
 
-NOTE: Please make sure there's proper AWS profile name is set in `backend.tf` and `provider.tf` files in order to grant terraform the proper permissions.
+NOTE: Please make sure there's proper AWS profile name is set in `backend.tf` and `provider.tf` files in order for terraform to proceed.
 
 ## Service deployment
 

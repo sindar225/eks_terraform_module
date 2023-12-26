@@ -36,7 +36,7 @@ To deploy the application, follow these steps:
     kubectl get pod
     ```
 
-    The output will show the status of the pod.
+    The output will show the status of pods.
 
 4. After the deployement has finished, you can test the permissions by running the following command:
 
