@@ -70,7 +70,7 @@ Another option would be to use Bitnami Sealed Secrets that offers a solution whi
 **Cons**
 - Poor support from helm, might be a problem with complex charts
 
-_Note: That option seems to be a pretty decent one provided that application deployment is coded in k8s manifests. Alternatibely if helm charts are used some additional work might be required to squeeze in the `encrypt` step_
+_Note: That option seems to be a pretty decent one provided that application deployment is coded in k8s manifests. If helm charts are used, some additional work might be required to squeeze in the `encrypt` step_
 
 #### 3. CI/CD Tool secrets store
 If CI/CD tools is used in the invironment (Jenkins, Github Actions etc), the secrets might be stored in those tools' credentials store.
@@ -84,6 +84,9 @@ If CI/CD tools is used in the invironment (Jenkins, Github Actions etc), the sec
 
 #### 4. HashiCorp Vault / Doppler 
 There's other solutions like HashiCorp Vault or Doppler, however I wouldn't consider them appripriate simply because they will put additional overhead for operational support and most probably add to costs, as free usage is tightly limited to the number of users or secrets. 
+
+#### 5. Secrets Manager API or SDK
+Alternatively dev teams might add support for the application to reach AWS Secrets manager API and retrieve secrets (provided a pod has sufficient priviliges), so that secret names / paths are be stored in the code repostiry instead of secrets themselves.
 
 ## Contributing
 
