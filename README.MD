@@ -43,7 +43,7 @@ The deployment process can be further enhanced by introducing helm charts which 
 ### Secrets management 
 There's multiple ways of implementing secrets management in AWS+EKS. Here we consider some of them.
 
-#### Secrets-store-csi-driver 
+#### 1. Secrets-store-csi-driver 
 Since Amazon Cloud provides a sheer variety of services, one of the preferrable options might be using AWS Secrets Store + secrets-store-csi-driver (secrets controller for k8s). 
 
 **Pros**
@@ -57,7 +57,7 @@ Since Amazon Cloud provides a sheer variety of services, one of the preferrable 
 - More resources is required compared to the following option
 - Troubleshooting might get complicated
 
-#### Sealed Secrets
+#### 2. Bitnami Sealed Secrets
 Another option would be to use Bitnami Sealed Secrets that offers a solution which is safe to store even inside a public repository. 
 
 **Pros**
@@ -72,7 +72,7 @@ Another option would be to use Bitnami Sealed Secrets that offers a solution whi
 
 _Note: That option seems to be a pretty decent one provided that application deployment is coded in k8s manifests. Alternatibely if helm charts are used some additional work might be required to squeeze in the `encrypt` step_
 
-#### CI/CD Tool secrets store
+#### 3. CI/CD Tool secrets store
 If CI/CD tools is used in the invironment (Jenkins, Github Actions etc), the secrets might be stored in those tools' credentials store.
 
 **Pros**
@@ -82,7 +82,7 @@ If CI/CD tools is used in the invironment (Jenkins, Github Actions etc), the sec
 - CI/CD tool is a must
 - If self-hosted solution, a way to saturate those secrets must be considered (which involves operational effort)
 
-#### HashiCorp Vault / Doppler 
+#### 4. HashiCorp Vault / Doppler 
 There's other solutions like HashiCorp Vault or Doppler, however I wouldn't consider them appripriate simply because they will put additional overhead for operational support and most probably add to costs, as free usage is tightly limited to the number of users or secrets. 
 
 ## Contributing
