@@ -1,4 +1,4 @@
-# Environment variables for Staging environment
+# Environment variables for Production environment
 
 env = "s"
 desired_size = 3
