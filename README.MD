@@ -9,7 +9,7 @@ Before you can use this Terraform module, make sure you have the following prere
 - Terraform (version 1.5.7)
 - kubectl (version 1.28.4)
 
-⚠️ NOTE: Since there is no remote backend configured for this module in this revision, deployment to all environment sis supposed to be done on a single dedicated machine in order for terraform to keep track of the deployment states.
+⚠️ NOTE: Since there is no remote backend configured for this module in this revision, deployment to all environment is supposed to be done on a single dedicated machine in order for terraform to keep track of the deployment states.
 
 ## Usage
 
